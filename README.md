@@ -25,4 +25,4 @@ The bot will run the module the next time it is started.
 Nothing to do! The bot will automatically rejoin channels when it is kicked now.
 
 ## License
-This module is licensed under the GNU General Public License, version 3. Please see `LICENSE` to read it.
+This module is licensed under the MIT license. Please see `LICENSE` to read it.
