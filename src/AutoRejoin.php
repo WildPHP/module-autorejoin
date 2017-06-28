@@ -8,11 +8,11 @@
 
 namespace WildPHP\Modules\AutoRejoin;
 
+use WildPHP\Core\ComponentContainer;
 use WildPHP\Core\Configuration\Configuration;
 use WildPHP\Core\Connection\IRCMessages\KICK;
 use WildPHP\Core\Connection\Queue;
 use WildPHP\Core\ContainerTrait;
-use WildPHP\Core\ComponentContainer;
 use WildPHP\Core\EventEmitter;
 use WildPHP\Core\Logger\Logger;
 
@@ -33,6 +33,10 @@ class AutoRejoin
 		$this->setContainer($container);
 	}
 
+	/**
+	 * @param KICK $ircMessage
+	 * @param Queue $queue
+	 */
 	public function autoRejoin(KICK $ircMessage, Queue $queue)
 	{
 		$currentNickname = Configuration::fromContainer($this->getContainer())
