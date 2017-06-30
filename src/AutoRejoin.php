@@ -39,9 +39,7 @@ class AutoRejoin
 	 */
 	public function autoRejoin(KICK $ircMessage, Queue $queue)
 	{
-		$currentNickname = Configuration::fromContainer($this->getContainer())
-			->get('currentNickname')
-			->getValue();
+		$currentNickname = Configuration::fromContainer($this->getContainer())['currentNickname'];
 
 		if ($currentNickname != $ircMessage->getTarget())
 			return;
