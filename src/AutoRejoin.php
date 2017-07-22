@@ -56,4 +56,12 @@ class AutoRejoin extends BaseModule
 
 		$queue->join($channel);
 	}
+
+	/**
+	 * @return string
+	 */
+	public static function getSupportedVersionConstraint(): string
+	{
+		return '^3.0.0';
+	}
 }
